@@ -1,6 +1,6 @@
 # Install
 
-1. Configure NGINX
+- Configure NGINX
 ```
 sudo nano /etc/nginx/sites-available/default
 ```
@@ -15,10 +15,20 @@ server {
 }
 ```
 
-2. Install Let's encrypt
+- Install Let's encrypt
 
 ```
 sudo certbot --nginx -d www.school.kg -d school.kg
 sudo nginx -t
 sudo systemctl restart nginx
+```
+
+- Change owner of the project folder to NGINX
+```
+sudo chown -R www-data:www-data /home/adilet/projects/school.kg
+```
+
+- Change owner of the project folder to adilet
+```
+sudo chown -R adilet:adilet /home/adilet/projects/school.kg
 ```
