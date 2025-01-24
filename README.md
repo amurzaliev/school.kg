@@ -2,7 +2,7 @@
 
 - Configure NGINX
 ```
-sudo nano /etc/nginx/sites-available/default
+sudo nano /etc/nginx/sites-available/school.kg
 ```
 ```
 server {
@@ -13,6 +13,9 @@ server {
       try_files $uri $uri/ /index.html;
     }
 }
+```
+```
+sudo ln -s /etc/nginx/sites-available/school.kg /etc/nginx/sites-enabled/
 ```
 
 - Install Let's encrypt
