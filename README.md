@@ -23,12 +23,10 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-- Change owner of the project folder to NGINX
+- Install project
 ```
-sudo chown -R www-data:www-data /var/www/school.kg
-```
-
-- Change owner of the project folder to adilet
-```
-sudo chown -R adilet:adilet /var/www/school.kg
+cd /var/www
+sudo mkdir school.kg
+sudo chown -R adilet:adilet school.kg
+git clone git@github.com:amurzaliev/school.kg.git school.kg
 ```
